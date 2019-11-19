@@ -1,14 +1,14 @@
+# frozen_string_literal: true
+
 require 'net/http'
-require 'openssl'
 require 'json'
 
 module Connection
+  # This class is design for establishing API connection using net/http
   class API
     attr_reader :url
 
-    NASA_API = "https://api.nasa.gov/insight_weather/?api_key=SUCObIFFXWZTrR54qqDC5eBIhHDhckZbFbv0ETdK&feedtype=json&ver=1.0"
-
-    def self.get(url: NASA_API)
+    def self.get(url:)
       new(url: url).get
     end
 

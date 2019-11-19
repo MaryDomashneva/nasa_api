@@ -8,7 +8,7 @@ RSpec.describe Connection::API do
     end
 
     it 'returns response from url' do
-      response = Connection::API.get
+      response = Connection::API.get(url: 'https://api.nasa.gov/')
       expect(response).to eq ({'weather' => 'good'})
     end
   end
