@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'date'
+
 module Weather
   # This class is designed for getting weather parameters for Mars
   class Mars
@@ -46,6 +48,10 @@ module Weather
     # Add calculation
     def sol
       '341'
+    end
+
+    def julian_date
+      DateTime.now.amjd.to_f
     end
   end
 end
